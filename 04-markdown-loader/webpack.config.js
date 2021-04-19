@@ -7,20 +7,17 @@ module.exports = {
   entry: './src/main.js',  // 注意这里的 ./ 不能省略
   // 只能存在一个 输出
   output: {
-    filename: '03-bundle.js',
+    filename: 'bundle.js',
     // 输出的文件名称
     path: path.join(__dirname, 'dist')
   },
   module: {
     rules: [
       {
-        // 正则表达式，来匹配文件
-        test: /\.css$/,
-        //  指定具体的 loader
-        // 多个 loader 的执行顺序，从后往前执行
+        test: /.md$/,
         use: [
-          'style-loader',
-          'css-loader'
+          'html-loader',
+          './markdown-loader'
         ]
       }
     ]

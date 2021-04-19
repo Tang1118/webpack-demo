@@ -1,28 +1,10 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ([
 /* 0 */,
 /* 1 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((module) => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-Object(function webpackMissingModule() { var e = new Error("Cannot find module './heading.css'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  const element = document.createElement('h2')
-
-  element.textContent = 'Hello world'
-  element.addEventListener('click', () => {
-    alert('Hello webpack')
-  })
-
-  return element
-});
-
+module.exports = "<h1 id=\"关于我\">关于我</h1>\n<p>德玛西亚</p>\n";
 
 /***/ })
 /******/ 	]);
@@ -52,6 +34,18 @@ Object(function webpackMissingModule() { var e = new Error("Cannot find module '
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -82,16 +76,15 @@ Object(function webpackMissingModule() { var e = new Error("Cannot find module '
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _heading_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _about_md__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _about_md__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_about_md__WEBPACK_IMPORTED_MODULE_0__);
 
 
-const heading = (0,_heading_js__WEBPACK_IMPORTED_MODULE_0__.default)()
-
-document.body.append(heading)
-
+console.log((_about_md__WEBPACK_IMPORTED_MODULE_0___default()))
 
 })();
 
